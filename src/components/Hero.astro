@@ -10,7 +10,7 @@ import GitHub from "./icons/GitHub.astro"
 <div class="max-w-xl">
   <div class="flex gap-4 mb-4">
     <img
-      class="rounded-full shadow-lg size-16"
+      class="rounded-full shadow-lg size-20"
       src="/me.webp"
       alt={personalImageAlt}
     />
@@ -23,19 +23,29 @@ import GitHub from "./icons/GitHub.astro"
       <Badge>Disponible para trabajar</Badge>
     </a>
   </div>
-  <h1
+  
+  <div class="flex gap-3 items-center">
+    <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-  >
-    Hola, soy Nicolás
-  </h1>
+    >
+      Hola, soy Nicolás
+    </h1>
+    <a href="https://www.credly.com/badges/d2b961bf-32c2-4101-8d27-b271a2fc5f07/public_url">
+      <img 
+      src="/aws-certified-cloud-practitioner.png" 
+      alt="Logo de aws cloud practitioner"
+      class="size-10">
+    </a>
+  </div>
   <p
     class="mt-6 text-xl text-pretty text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
   >
     <strong
-      >Ingeniero Civil en Informática y AWS Cloud Practitioner Certified</strong
+      >Ingeniero Civil en Informática</strong> y <strong>AWS Cloud Practitioner Certified</strong
     > de Santiago, Chile 🇨🇱. Con conocimientos en diseño e implementación de aplicaciones web basadas en Cloud, 
-    y con experiencia en automatización de flujos y visualización de datos, Mi enfoque es dar soluciones óptimas a problemas reales a través de la tecnología.
+    y con experiencia en automatización de flujos y visualización de datos, mi enfoque es dar soluciones óptimas a problemas reales a través de la tecnología.
   </p>
+  
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:narayaurrutia@gmail.com">
       <MailIcon class="size-4" />
