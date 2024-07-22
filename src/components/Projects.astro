@@ -4,6 +4,12 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import React from "./icons/React.astro"
+import Node from "./icons/Node.astro"
+import DynamoDB from "./icons/DynamoDB.astro"
+import LambdaAWS from "./icons/LambdaAWS.astro"
+import Postgres from "./icons/Postgres.astro"
+import Bootstrap from "./icons/Bootstrap.astro"
 
 const TAGS = {
   NEXT: {
@@ -16,17 +22,47 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  REACT: {
+    name: "React JS",
+    class: "bg-[#003159] text-white",
+    icon: React,
+  },
+  NODE: {
+    name: "Node JS",
+    class: "bg-[#003159] text-white",
+    icon: Node,
+  },
+  DYNAMODB: {
+    name: "Dynamo DB",
+    class: "bg-[#003159] text-white",
+    icon: DynamoDB,
+  },
+  LAMBDA: {
+    name: "Lambda",
+    class: "bg-[#003159] text-white",
+    icon: LambdaAWS,
+  },
+  POSTGRES: {
+    name: "PostgreSQL",
+    class: "bg-[#003159] text-white",
+    icon: Postgres,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-[#003159] text-white",
+    icon: Bootstrap,
+  },
 }
 const PROJECTS = [
 {
     title: "JET Impresiones 3D - E-Commerce",
     description:
-      "Sitio web e-Commerce para empresa especializada en la fabricación de objetos con impresoras 3D. Integración con pasarela de pago Khipu, diseño responsive y backend serverless en AWS.",
+      "Sitio web e-Commerce para empresa especializada en la fabricación de objetos con impresoras 3D. Integración con pasarela de pago Khipu, diseño responsive, envio de correos automatizados y backend serverless en AWS.",
     link: "https://jetimpresiones3d.com",
     github: "https://github.com/nicolas772/jet-impresiones-front",
     image: "/projects/JET.webp",
     alt: "Imagen principal de proyecto JET impresiones 3D",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.LAMBDA, TAGS.DYNAMODB],
   },
   {
     title: "Feel UX - Automatización de Pruebas de Usabilidad",
@@ -37,9 +73,9 @@ const PROJECTS = [
     githubBack: "https://github.com/nicolas772/backend-memoria",
     image: "/projects/feelUX.webp",
     alt: "Imagen principal de proyecto Feel UX",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.REACT, TAGS.BOOTSTRAP, TAGS.NODE, TAGS.POSTGRES],
   },
-  {
+  /*{
     title: "Desk Habitum - Monitoreo de manías compulsivas",
     description:
       "App de escritorio que identifica, a través de la webcam, manías compulsivas (como morderse las uñas o jalar cabello). Esta es una versión reducida de la aplicación, utilizando Electron JS como framework y modelos de Machine Learning pre-entrenados.",
@@ -48,7 +84,7 @@ const PROJECTS = [
     image: "/projects/deskhabitum.webp",
     alt: "Imagen principal de proyecto Desk Habitum",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
+  },*/
 ]
 ---
 
