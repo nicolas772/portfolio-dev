@@ -18,13 +18,35 @@ const TAGS = {
   },
 }
 const PROJECTS = [
+{
+    title: "JET Impresiones 3D - E-Commerce",
+    description:
+      "Sitio web e-Commerce para empresa especializada en la fabricación de objetos con impresoras 3D. Integración con pasarela de pago Khipu, diseño responsive y backend serverless en AWS.",
+    link: "https://jetimpresiones3d.com",
+    github: "https://github.com/nicolas772/jet-impresiones-front",
+    image: "/projects/JET.webp",
+    alt: "Imagen principal de proyecto JET impresiones 3D",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
   {
     title: "Feel UX - Automatización de Pruebas de Usabilidad",
     description:
       "Plataforma web que automatiza la toma y procesamiento de datos en un contexto de pruebas de usabilidad de un software. Además, realiza Análisis de Sentimiento basado en IA a las opiniones de los usuarios.",
     link: "https://feelux.onrender.com/login",
-    github: "https://github.com/pheralb/svgl",
+    githubFront: "https://github.com/nicolas772/frontend-memoria",
+    githubBack: "https://github.com/nicolas772/backend-memoria",
     image: "/projects/feelUX.webp",
+    alt: "Imagen principal de proyecto Feel UX",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+  {
+    title: "Desk Habitum - Monitoreo de manías compulsivas",
+    description:
+      "App de escritorio que identifica, a través de la webcam, manías compulsivas (como morderse las uñas o jalar cabello). Esta es una versión reducida de la aplicación, utilizando Electron JS como framework y modelos de Machine Learning pre-entrenados.",
+    link: "",
+    github: "https://github.com/nicolas772/DeskHabitum-v3",
+    image: "/projects/deskhabitum.webp",
+    alt: "Imagen principal de proyecto Desk Habitum",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
 ]
@@ -32,11 +54,11 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, githubFront, githubBack, github, alt }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt={alt} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
@@ -60,11 +82,24 @@ const PROJECTS = [
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {githubFront && (
+            <LinkButton href={githubFront}>
+              <GitHub class="size-6" />
+              Front-end
+              
+            </LinkButton>
+          )}
+          {githubBack && (
+            <LinkButton href={githubBack}>
+              <GitHub class="size-6" />
+              Back-end
+              
+            </LinkButton>
+          )}
           {github && (
             <LinkButton href={github}>
               <GitHub class="size-6" />
               Code
-              
             </LinkButton>
           )}
           {link && (
