@@ -10,6 +10,8 @@ import DynamoDB from "./icons/DynamoDB.astro"
 import LambdaAWS from "./icons/LambdaAWS.astro"
 import Postgres from "./icons/Postgres.astro"
 import Bootstrap from "./icons/Bootstrap.astro"
+import Electron from "./icons/Electron.astro"
+import Tensorflow from "./icons/Tensorflow.astro"
 
 const TAGS = {
   NEXT: {
@@ -52,6 +54,16 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Bootstrap,
   },
+  ELECTRON: {
+    name: "Electron",
+    class: "bg-[#003159] text-white",
+    icon: Electron
+  },
+  TENSORFLOW: {
+    name: "Tensorflow",
+    class: "bg-[#003159] text-white",
+    icon: Tensorflow
+  }
 }
 const PROJECTS = [
 {
@@ -74,16 +86,16 @@ const PROJECTS = [
     alt: "Imagen principal de proyecto Feel UX",
     tags: [TAGS.REACT, TAGS.BOOTSTRAP, TAGS.NODE, TAGS.POSTGRES],
   },
-  /*{
+  {
     title: "Desk Habitum - Monitoreo de manías compulsivas",
     description:
       "App de escritorio que identifica, a través de la webcam, manías compulsivas (como morderse las uñas o jalar cabello). Esta es una versión reducida de la aplicación, utilizando Electron JS como framework y modelos de Machine Learning pre-entrenados.",
-    link: "",
+    link: "https://youtu.be/Ntsi9D122lk",
     github: "https://github.com/nicolas772/DeskHabitum-v3",
     image: "/projects/deskhabitum.webp",
     alt: "Imagen principal de proyecto Desk Habitum",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },*/
+    tags: [TAGS.ELECTRON, TAGS.BOOTSTRAP, TAGS.POSTGRES, TAGS.TENSORFLOW],
+  },
 ]
 ---
 
